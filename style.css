@@ -334,24 +334,26 @@ font-weight: 500;
 
  .skills{
     height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    /* align-items: center; */
+    /* flex-direction: column; */
     width: 100%;
-    /* margin-top: 50px; */
     background-color: #ff202005;
-     padding-top: 50px;
+    
+}
+.skil-s{
+    display: flex;
+    justify-content: center;
 }
 
-
-#skil{
+/* #skil{
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
     color: #041230;
-}
+} */
 
- .containerr{
+ /* .containerr{
     display: grid;
     row-gap: 8px;
     align-items: center;
@@ -359,7 +361,93 @@ font-weight: 500;
     padding-left: 7.0rem;
     padding-right: 7.0rem;
     
+} */ 
+/* ______________________________ */
+/* Skills Section / */
+
+#jira {
+
 }
+.contskills {
+
+    display: grid;
+    grid-template-columns: repeat( 3 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skills_box {
+    padding: 1rem;
+    color:#87B0C4;
+    cursor:pointer;
+
+}
+
+.skills_title {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skills_icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 40%;
+    box-shadow: 0 25px 30px  #0b2e79b6;
+}
+
+.skills_title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    background-color:#041230;
+    border-radius: 2px 0 0 2px;
+    transition: 0.5s;
+
+}
+
+.skills_title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color:#041230;;
+    border-radius: 0 2px 2px 0;
+    transition: 0.5s;
+
+}
+
+.skills_box:hover > .skills_title::after, .skills_box:hover > .skills_title::before {
+
+    width: 35px;
+}
+
+.skills_box:hover .img {
+ 
+    transform: translateY(-100px);
+
+}
+
+.skills_title h6 {
+    color: #4e5f68;
+    margin: 0.5rem;
+}
+
+/* / End Skills Section */
 
 
 
